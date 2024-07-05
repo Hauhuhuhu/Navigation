@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+    <title>Thông tin Khánh Phú Mỹ</title>
+</head>
+<body>
+    <div class="header">
+        <!-- header__max header__min-->
+        <div class="header__min">
+            <i class="fa-solid fa-bars more"></i>
+            <ul class="header__list">
+                <li class="header__item">
+                    <i class="fa-brands fa-facebook facebook"></i>
+                    <a class="header__item-text" href="https://www.facebook.com/profile.php?id=100035800292044">Facebook</a> 
+                </li>
+                <li class="header__item">
+                    <i class="fa-brands fa-facebook-messenger messenger"></i>
+                    <a class="header__item-text" href="">Messenger</a> 
+                   
+                </li>
+                <li class="header__item">
+                    <i class="fa-brands fa-instagram instagram"></i>
+                    <a class="header__item-text" href="https://www.instagram.com/leeminho_phumy/">Instagram</a> 
+                   
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var element = document.querySelector(".header__min");
+        document.addEventListener("DOMContentLoaded", function() {
+          element.addEventListener("mouseover", function() {
+            element.classList.add("header__max");
+          });
+          element.addEventListener("mouseout", function() {
+            element.classList.remove("header__max");
+          });
+        });
+    </script>
+</body>
+</html>

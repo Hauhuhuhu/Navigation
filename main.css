@@ -1,0 +1,92 @@
+html {
+    font-size: 62.5%;
+}
+.header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 50px;
+    max-width: 400px;
+    background-color: #b9b8b8;
+}
+.header__min {
+    height: 100%;
+    width: 50px;
+    text-align: center;
+}
+.header__min .header__item-text {
+    display: none;
+}
+.header__max {
+    width: 200px; 
+    animation: animations linear 0.5s; 
+}
+@keyframes animations {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.header__max .header__item-text {
+    display: inline-block;
+}
+.header__max .more {
+    margin-left: 80%;
+
+}
+.header__max .more:hover {
+    width: 600;
+    scale: 1;
+    color: #fff;
+}
+.header__max .header__item {
+    display: flex;
+    margin-left: 20%;
+}
+.header__max i:hover,
+.header__max .header__item-text:hover {
+    scale: 1.2;
+}
+
+
+.more {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+
+.header__list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.header__item {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    line-height: 2rem;
+}
+.header__item a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.header__item .facebook {
+    color: #0866ff;
+}
+.header__item .messenger {
+    color: #ee1455;
+}
+.header__item .instagram {
+    color: #f75d68;
+}
+.header__item-text {
+    margin-left: 20px;
+}
