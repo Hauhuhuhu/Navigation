@@ -6,8 +6,6 @@ html {
     top: 0;
     bottom: 0;
     left: 0;
-    min-width: 50px;
-    max-width: 400px;
     background-color: #b9b8b8;
 }
 .header__min {
@@ -20,14 +18,16 @@ html {
 }
 .header__max {
     width: 200px; 
-    animation: animations linear 0.5s; 
+    animation: animations ease 0.35s; 
 }
 @keyframes animations {
     from {
         opacity: 0;
+        width: 50px;
     }
     to {
         opacity: 1;
+        width: 200px;
     }
 }
 .header__max .header__item-text {
@@ -90,3 +90,46 @@ html {
 .header__item-text {
     margin-left: 20px;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* switch */
+
+.switch label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(to bottom right, #dadada,#ededed, #f8f8f8);
+    border-radius: 999px;
+    transition: transform 0.3s ease;
+}
+.switch label::before {
+    position: absolute;
+    left: 2px;
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    box-shadow: -1px 2px 1px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(to bottom right, #ebebeb, #fff);
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+}
+.switch [type="checkbox"]:checked ~ label::before {
+    transform: translateX(30px);
+}
+.switch [type="checkbox"]:checked ~ label {
+    background: #6bd55c;
+}
+
+
+
+

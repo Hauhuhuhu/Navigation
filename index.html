@@ -8,7 +8,7 @@
     <title>Thông tin Khánh Phú Mỹ</title>
 </head>
 <body>
-    <div class="header">
+    <nav class="header">
         <!-- header__max header__min-->
         <div class="header__min">
             <i class="fa-solid fa-bars more"></i>
@@ -24,21 +24,28 @@
                 </li>
                 <li class="header__item">
                     <i class="fa-brands fa-instagram instagram"></i>
-                    <a class="header__item-text" href="https://www.instagram.com/leeminho_phumy/">Instagram</a> 
-                   
+                    <a class="header__item-text" href="https://www.instagram.com/leeminho_phumy/">Instagram</a>  
                 </li>
             </ul>
         </div>
-    </div>
+    </nav>
+    <!-- switch -->
+    <main>
+        <div class="switch">
+            <input type="checkbox" id="switch-theme" name="" hidden>
+            <label for="switch-theme" class="switch-label">
+            </label>
+        </div>
+    </main>
     <script>
         var element = document.querySelector(".header__min");
         document.addEventListener("DOMContentLoaded", function() {
-          element.addEventListener("mouseover", function() {
-            element.classList.add("header__max");
-          });
-          element.addEventListener("mouseout", function() {
-            element.classList.remove("header__max");
-          });
+            element.addEventListener("mouseover", function() {
+                element.classList.add("header__max");
+            });
+            element.addEventListener("mouseout", function() {
+                element.classList.remove("header__max");
+            });
         });
     </script>
 </body>
