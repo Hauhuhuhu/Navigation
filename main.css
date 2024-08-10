@@ -178,5 +178,64 @@ html {
     transition: background-color 0.5s;
 }
 
+/* step animation */
+.box__img {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    background: #000 url(./img/bird-Photoroom.png);
+    height: 166.67px;
+    width: 180px;
+    border-radius: 999px;
+    animation: bird_animation 1.5s infinite steps(1);
+}
+@keyframes bird_animation {
+    0% {
+        background-position: -0px -0px;
+    }
+    7.2% {
+        background-position: -180px -0px;
+    }
+    14.4% {
+        background-position: -360px -0px;
+    }
+    21.6% {
+        background-position: -540px -0px;
+    }
+    28.8% {
+        background-position: -720px -0px;
+    }
+    36% {
+        background-position: -0px -166.67px;
+    }
+    43.2% {
+        background-position: -180px -166.67px;
+    }
+    50.4% {
+        background-position: -360px -166.67px;
+    }
+    57.6% {
+        background-position: -540px -166.67px;
+    }
+    64.8% {
+        background-position: -720px -166.67px;
+    }
+    72% {
+        background-position: -0px -333.34px;
+    }
+    79.2% {
+        background-position: -180px -333.34px;
+    }
+    86.4% {
+        background-position: -360px -333.34px;
+    } 
+    93.6% {
+        background-position: -540px -333.34px;
+    } 
+    100% {
+        background-position: -720px -333.34px;
+    } 
+
+}
 
 
