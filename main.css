@@ -8,6 +8,9 @@ html {
     left: 0;
     background-color: #b9b8b8;
 }
+a {
+    text-decoration: none;
+}
 
 .header__min {
     height: 100%;
@@ -136,18 +139,18 @@ html {
     left: 50%;
     top: 50%;
     translate: -50% -50%;
-    z-index: 999;
+    /* z-index: 999; */
 }
 .loading.inner {
     position: absolute;
-    z-index: 999;
+    /* z-index: 999; */
 }
 .loading::before {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: 0;   
     border: 5px solid;
-    border-color: #666 transparent transparent transparent;
+    border-color: #999 transparent transparent transparent;
     border-radius: 50%;
     animation: loading 1s ease-in-out infinite;
 }
@@ -158,7 +161,10 @@ html {
     left: 50%;
     translate: -50%;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 900;
+    background: linear-gradient(90deg,#99d0f8, #5ebbff 40%, #a174ff 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 @keyframes loading {
     from {
@@ -236,6 +242,38 @@ html {
         background-position: -720px -333.34px;
     } 
 
+}
+
+/* btn */
+.btn-wrap {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    display: flex;
+    gap: 10px;
+
+}
+.btn,
+.btn-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    padding: 12px 16px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-color: #212121;
+}
+
+.btn,
+.btn-2:hover {
+    background: linear-gradient(#212121, #212121) padding-box, linear-gradient(142deg, #5ebbff, #a174ff) border-box;
+}
+.btn:hover {
+    background: linear-gradient(142deg, #5ebbff, #a174ff) padding-box, linear-gradient(142deg, #5ebbff, #a174ff) border-box;
 }
 
 
